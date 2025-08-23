@@ -65,9 +65,11 @@ document.addEventListener("DOMContentLoaded", function () {
             toggle.classList.add('animated'); // Apply the animation
             
             // Remove the animation class after it plays (for repeat effect)
+            // Needs to be worked on -> Currently Animation not working as desired
             setTimeout(() => {
                 toggle.classList.remove('animated');
             }, 400);
         });
     });
+
 });
