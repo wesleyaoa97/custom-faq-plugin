@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // 🔹 Bind Event Listeners Dynamically for Edit & Delete
+    // Bind Event Listeners Dynamically for Edit & Delete
     function bindEditDeleteButtons() {
         document.querySelectorAll(".delete-faq").forEach(button => {
             button.addEventListener("click", function (e) {
@@ -122,3 +122,4 @@ document.addEventListener("DOMContentLoaded", function () {
     // Bind when page loads
     bindEditDeleteButtons();
 });
+
