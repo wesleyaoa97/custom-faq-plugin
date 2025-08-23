@@ -1,21 +1,15 @@
 <?php
 /**
  * Plugin Name: Custom FAQ Manager
- * Plugin URI: https://yourwebsite.com
  * Description: A custom FAQ system with categories and dynamic shortcodes.
- * Version: 1.0
- * Author: Your Name
- * Author URI: https://yourwebsite.com
- * License: GPL2
+ * Version: 0.1.0
+ * Author: W.A. Oliveira Azevedo - TheTechDodo
+ * Author URI: https://thetechdodo.com/
+ * Author URI Staging: https://staging-eab2-thetechdodo.wpcomstaging.com/veelgestelde-vragen/
  */
 if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
-/*
-add_action('init', function() {
-    error_log('Plugin URL: ' . plugin_dir_url(__FILE__));
-});*/
-
 
 // Load Admin Scripts
 function custom_faq_admin_scripts($hook) {
@@ -61,8 +55,7 @@ function custom_faq_edit() {
 }
 add_action('wp_ajax_custom_faq_edit', 'custom_faq_edit');
 
-
-// Add FAQ Management Page
+// Add FAQ Management Page (BackEnd)
 function custom_faq_admin_menu() {
     if (!current_user_can('manage_options')) {
         return;
@@ -166,7 +159,6 @@ function custom_faq_admin_page() {
     <?php
 }
 
-
 // Modify the FAQ Post Type to Remove "Add New"
 function custom_faq_post_type() {
     $labels = array(
@@ -199,7 +191,6 @@ function custom_faq_post_type() {
 }
 add_action('init', 'custom_faq_post_type');
   
-
 // Register FAQ Categories (Taxonomy)
 function create_faq_taxonomy() {
   $labels = array(
@@ -365,8 +356,6 @@ function custom_faq_add() {
 }
 add_action('wp_ajax_custom_faq_add', 'custom_faq_add');
 
-
-
 // Handle AJAX: Delete FAQ
 function custom_faq_delete() {
     check_ajax_referer('custom_faq_nonce', 'security');
@@ -377,5 +366,3 @@ function custom_faq_delete() {
     wp_send_json_success();
 }
 add_action('wp_ajax_custom_faq_delete', 'custom_faq_delete');
-
-
