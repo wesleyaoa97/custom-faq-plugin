@@ -1,5 +1,3 @@
-/* FAQ Solution */
-
 /* FAQ Container */
 .faq-container {
     max-width: auto;
@@ -34,14 +32,6 @@
     box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.015); /* Subtle glow effect */
 }
 
-/*
-#faqFilter {
-	height: 30px;
-	border-radius: 4px;
-	color: rgb(27, 31, 59);
-	cursor: pointer;
-}
-*/
 /* Styling the dropdown (faqFilter) */
 #faqFilter {
     height: 30px;
@@ -108,8 +98,6 @@
     animation: pulse-click 0.4s ease-in-out;
 }
 
-
-
 /* Question Container */
 .faq-question-outer {
     display: flex;
@@ -149,6 +137,5 @@
 
 /* Active State */
 .faq-item.active {
-    background: rgb(102, 176, 255)
-;
+    background: rgb(102, 176, 255);
 }
