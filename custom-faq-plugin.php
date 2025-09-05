@@ -366,3 +366,5 @@ function custom_faq_delete() {
     wp_send_json_success();
 }
 add_action('wp_ajax_custom_faq_delete', 'custom_faq_delete');
+
+// Testing connection with local, git and stading deplo
