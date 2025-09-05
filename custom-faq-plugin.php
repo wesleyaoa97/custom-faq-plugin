@@ -367,4 +367,4 @@ function custom_faq_delete() {
 }
 add_action('wp_ajax_custom_faq_delete', 'custom_faq_delete');
 
-// Testing connection with local, git and stading deplo
+// Testing connection with local, git and stading deploy
